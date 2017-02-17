@@ -51,6 +51,9 @@
          <span>
             <a class="theme-color-1" href="#" id="${el}-configure-link">${msg("audit.dashlet.link.configure")}</a>
          </span>
+         <span>
+             <a class="theme-color-1" href="/alfresco/service/exportauditcsv?" id="${el}-export-link">${msg("audit.dashlet.link.export")}</a>
+         </span> 
          <!--[if IE 6]>   </span> <![endif]-->
          </#if>
       </div>

@@ -298,6 +298,7 @@ if (typeof Extras.dashlet == "undefined" || !Extras.dashlet)
                Dom.removeClass(this.entriesContainer,"scrollableList");
 
             Event.addListener(this.id + "-configure-link", "click", this.onConfigClick, this, true);
+            Event.addListener(this.id + "-export-link", "click", this.onExportClick, this, true); 
             Event.addListener(this.id + "-refresh", "click", this.onRefresh, this, true);
             Event.addListener(this.searchBoxContainer,"keyup", this.onSearchWithinResultsFilterKeyup, this, true);
 
@@ -742,6 +743,13 @@ if (typeof Extras.dashlet == "undefined" || !Extras.dashlet)
          this.showOrHideColumn(1,this.options.show_user_column);
          this.showOrHideColumn(2,this.options.show_time_column);
          this.showOrHideColumn(3,this.options.show_values_column);
+
+
+         //Seli
+         //liviub change the link
+         Dom.get(this.id + "-export-link").href="/alfresco/service/exportauditcsv?search=&application="+this.options.application + 
+         (this.options.valueFilter ? "&valueFilter="+encodeURI(this.options.valueFilter) : "") + (this.options.limit ? "&limit="+encodeURI(this.options.limit) : "") + 
+         (this.options.additionalQueryParams ? "&additionalQueryParams="+encodeURI(this.options.additionalQueryParams.replace(/&/g,'\uFFFF')) : ""); 
 
       },
 

@@ -300,8 +300,9 @@
 
         <!-- Copy properties files -->
         <copy todir="${build.amp.dir}" file="${amp.file.properties}" failonerror="true" />
+        <!--
         <copy todir="${build.amp.dir}" file="${amp.file.mappings}" failonerror="true" />
-
+        -->
         <!-- Copy config files -->
         <mkdir dir="${build.amp.dir}/config" />
         <copy todir="${build.amp.dir}/config">
