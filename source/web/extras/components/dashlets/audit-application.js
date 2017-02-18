@@ -747,7 +747,7 @@ if (typeof Extras.dashlet == "undefined" || !Extras.dashlet)
 
          //Seli
          //liviub change the link
-         Dom.get(this.id + "-export-link").href="/alfresco/service/exportauditcsv?search=&application="+this.options.application + 
+         Dom.get(this.id + "-export-link").href="/alfresco/service/metadata/exportauditcsv?search=&application="+this.options.application + 
          (this.options.valueFilter ? "&valueFilter="+encodeURI(this.options.valueFilter) : "") + (this.options.limit ? "&limit="+encodeURI(this.options.limit) : "") + 
          (this.options.additionalQueryParams ? "&additionalQueryParams="+encodeURI(this.options.additionalQueryParams.replace(/&/g,'\uFFFF')) : ""); 
 
